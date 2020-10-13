@@ -3,23 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_news">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.flimflo.alpha.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_news"
+        android:name="com.flimflo.alpha.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.flimflo.alpha.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_ranking"
+        android:name="com.flimflo.alpha.ui.ranking.RankingFragment"
+        android:label="@string/title_ranking"
+        tools:layout="@layout/fragment_ranking" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.flimflo.alpha.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_games"
+        android:name="com.flimflo.alpha.ui.games.GamesFragment"
+        android:label="@string/title_games"
+        tools:layout="@layout/fragment_games" />
+
+    <fragment
+        android:id="@+id/navigation_sponsors"
+        android:name="com.flimflo.alpha.ui.sponsors.SponsorsFragment"
+        android:label="@string/title_sponsors"
+        tools:layout="@layout/fragment_sponsors" />
+
+    <fragment
+        android:id="@+id/navigation_rules"
+        android:name="com.flimflo.alpha.ui.rules.RulesFragment"
+        android:label="@string/title_rules"
+        tools:layout="@layout/fragment_rules" />
 </navigation>
