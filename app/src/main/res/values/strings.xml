@@ -5,4 +5,7 @@
     <string name="title_games">Games</string>
     <string name="title_sponsors">Sponsors</string>
     <string name="title_rules">Rules</string>
+    <string name="plus">+</string>
+    <string name="negative">-</string>
+    <string name="points">Points:</string>
 </resources>
