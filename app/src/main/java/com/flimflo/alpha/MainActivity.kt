@@ -11,9 +11,11 @@ import com.flimflo.alpha.ui.games.Games
 import com.flimflo.alpha.ui.games.GamesFragment
 import com.flimflo.alpha.ui.news.News
 import com.flimflo.alpha.ui.news.NewsFragment
+import com.flimflo.alpha.ui.ranking.RankingFragment
+import com.flimflo.alpha.ui.ranking.Ranking
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), GamesFragment.CommListener, NewsFragment.CommListener {
+class MainActivity : AppCompatActivity(), GamesFragment.CommListener, NewsFragment.CommListener, RankingFragment.CommListener {
 
     private lateinit var database: AlphaDataBase
 
@@ -57,4 +59,14 @@ class MainActivity : AppCompatActivity(), GamesFragment.CommListener, NewsFragme
         database.newsDao.DeleteAll()
         database.newsDao.InsertList(newsList)
     }
+
+    override fun getRankingList(): MutableList<Ranking> {
+        return database.rankingDao.GetAll()
+    }
+
+    override fun saveRankingList(rankingList: MutableList<Ranking>) {
+        database.rankingDao.DeleteAll()
+        database.rankingDao.InsertList(rankingList)
+    }
+
 }

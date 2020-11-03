@@ -9,12 +9,15 @@ import com.flimflo.alpha.ui.games.Games
 import com.flimflo.alpha.ui.games.GamesDao
 import com.flimflo.alpha.ui.news.News
 import com.flimflo.alpha.ui.news.NewsDao
+import com.flimflo.alpha.ui.ranking.Ranking
+import com.flimflo.alpha.ui.ranking.RankingDao
 
-@Database(entities = [News::class, Games::class], version = 1)
+@Database(entities = [News::class, Games::class, Ranking::class], version = 1)
 @TypeConverters(DataRoomConverter::class)
 abstract class AlphaDataBase : RoomDatabase() {
     abstract val newsDao: NewsDao
     abstract val gamesDao: GamesDao
+    abstract val rankingDao : RankingDao
 
     companion object {
         @Volatile
