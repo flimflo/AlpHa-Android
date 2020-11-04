@@ -26,7 +26,7 @@
             android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Equipo" />
+            android:text="@string/teams" />
 
         <TextView
             android:id="@+id/tvGoals"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="G+" />
+            android:text="G-" />
 
         <TextView
             android:id="@+id/tvGoalsAgainst"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="G-" />
+            android:text="G+" />
 
         <TextView
             android:id="@+id/tvPuntos"
@@ -50,13 +50,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Puntos" />
+            android:text="@string/points" />
     </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRanking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recRanking"
         android:layout_width="411dp"
         android:layout_height="match_parent"
         android:layout_gravity="center" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>

@@ -45,6 +45,12 @@ class RankingFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_ranking, container, false)
 
+        val swipeRefreshLayout: SwipeRefreshLayout = root.findViewById(R.id.swipeRanking)
+        swipeRefreshLayout.setOnRefreshListener {
+            parseRanking()
+
+            swipeRefreshLayout.isRefreshing = false
+        }
         recyclerView = root.findViewById(R.id.recRanking)
         recyclerView.apply {
             setHasFixedSize(true)
