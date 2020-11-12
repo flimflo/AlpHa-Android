@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AlpHa</string>
+    <string name="title_news">Noticias</string>
+    <string name="title_ranking">Posiciones</string>
+    <string name="title_games">Juegos</string>
+    <string name="title_sponsors">Patrocinadores</string>
+    <string name="title_rules">Reglas</string>
+    <string name="plus">+</string>
+    <string name="negative">-</string>
+    <string name="points">Puntos:</string>
+    <string name="rule">Regla&#160;</string>
+    <string name="team">Equipo</string>
+</resources>
