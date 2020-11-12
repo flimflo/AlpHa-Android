@@ -7,7 +7,7 @@
     <string name="title_rules">Rules</string>
     <string name="plus">+</string>
     <string name="negative">-</string>
-    <string name="points">Points:</string>
+    <string name="points">Points</string>
     <string name="rule">Rule&#160;</string>
     <string name="team">Team</string>
 </resources>
