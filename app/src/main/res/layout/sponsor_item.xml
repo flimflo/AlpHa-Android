@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgViewSponsor"
         android:layout_width="331dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
