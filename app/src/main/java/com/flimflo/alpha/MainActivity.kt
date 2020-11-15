@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(), GamesFragment.CommListener, NewsFragme
 
     private lateinit var database: AlphaDataBase
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
