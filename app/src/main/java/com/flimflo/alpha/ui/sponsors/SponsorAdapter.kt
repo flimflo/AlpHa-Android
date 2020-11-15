@@ -14,6 +14,7 @@ class SponsorAdapter (val sponsor:List<Sponsors>):RecyclerView.Adapter<SponsorAd
         fun render(sponsor: Sponsors){
             view.txtDatosCont.text = sponsor.contacto
             view.txtDatosDir.text = sponsor.direccion
+            view.imgViewSponsor.setImageResource(sponsor.imagen)
         }
     }
 

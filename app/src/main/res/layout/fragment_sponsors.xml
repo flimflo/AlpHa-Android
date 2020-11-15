@@ -7,18 +7,23 @@
     android:orientation="vertical"
     tools:context=".ui.rules.RulesFragment">
 
-    <Space
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recSponsors"
-        android:layout_width="411dp"
-        android:layout_height="502dp"
-        android:layout_gravity="center"
-        tools:listitem="@layout/sponsor_item" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recSponsors"
+                android:layout_width="match_parent"
+                android:layout_height="596dp"
+                android:layout_gravity="center"
+                tools:listitem="@layout/sponsor_item" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
