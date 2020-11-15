@@ -12,4 +12,7 @@
     <string name="rule">Regla&#160;</string>
     <string name="team">Equipo</string>
     <string name="updated">actualizado</string>
+    <string name="contacto">Contacto</string>
+    <string name="direccion">Dirección</string>
+    <string name="logosponsor">LogoSponsor</string>
 </resources>
