@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,9 +13,9 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
-import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.flimflo.alpha.R import org.json.JSONException
+import com.flimflo.alpha.R
+import org.json.JSONException
 
 class RankingFragment : Fragment() {
     var listener: CommListener? = null
@@ -47,6 +48,8 @@ class RankingFragment : Fragment() {
 
         val swipeRefreshLayout: SwipeRefreshLayout = root.findViewById(R.id.swipeRanking)
         swipeRefreshLayout.setOnRefreshListener {
+            val toast = Toast.makeText(context, getString(R.string.title_ranking) + " " + getString(R.string.updated), Toast.LENGTH_SHORT)
+            toast.show()
             parseRanking()
 
             swipeRefreshLayout.isRefreshing = false
