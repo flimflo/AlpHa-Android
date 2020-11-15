@@ -10,4 +10,7 @@
     <string name="points">Points</string>
     <string name="rule">Rule&#160;</string>
     <string name="team">Team</string>
+    <string name="contacto">Contacto</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="logosponsor">LogoSponsor</string>
 </resources>
