@@ -41,7 +41,5 @@ class RankingAdapter(private val context: Context, private val rankingList: Muta
         var txtGoalsAgainst : TextView = itemView.findViewById(R.id.tvGoalsAgainst)
         var txtPosition : TextView = itemView.findViewById(R.id.tvPosition)
 
-
-
     }
 }

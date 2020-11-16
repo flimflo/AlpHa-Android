@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,8 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.flimflo.alpha.R
+import com.flimflo.alpha.ui.news.News
+import kotlinx.android.synthetic.main.fragment_games.*
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -68,6 +71,10 @@ class GamesFragment : Fragment() {
         requestQueue = Volley.newRequestQueue(requireContext())
 
         gamesList = listener!!.getGamesList()
+        val txtDate = root.findViewById<TextView>(R.id.txtDateGames)
+        if(gamesList.size != 0){
+            txtDate.text = gamesList[0].date
+        }
         gamesAdapter = GamesAdapter(requireContext(), gamesList)
         recyclerView.adapter = gamesAdapter
 
@@ -76,22 +83,23 @@ class GamesFragment : Fragment() {
         return root
     }
 
-    lateinit var something: JSONObject
-
     private fun parseGames() {
-        val url = "https://dry-harbor-29135.herokuapp.com/api/leaderboard/table"
-        val request = JsonArrayRequest(
+        val url = "https://dry-harbor-29135.herokuapp.com/api/weeklymatch"
+        val request = JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->
                 try {
                     gamesList.clear()
-                    for (i in 0 until response.length()) {
-                        val `object` = response.getJSONObject(i)
-                        val team = `object`.getString("teamName")
-                        val goals = `object`.getString("goals").toInt()
-                        val goalsA = `object`.getString("goalsAgainst").toInt()
-                        val points = `object`.getString("points").toInt()
-                        gamesList.add(Games(team, goals, goalsA, points))
+                    val date = response.getString("date")
+                    txtDateGames.text = date
+                    val temp = response.getJSONArray("roles")
+                    for (i in 0 until temp.length()) {
+                        val `object` = temp.getJSONObject(i)
+                        val teamA = `object`.getString("equipoA")
+                        val teamB = `object`.getString("equipoB")
+                        val cancha = `object`.getInt("cancha")
+                        val hora = `object`.getString("hora")
+                        gamesList.add(Games(teamA, teamB, cancha, hora, date))
                     }
                     listener!!.saveGamesList(gamesList)
                     gamesAdapter.notifyDataSetChanged()

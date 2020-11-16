@@ -1,6 +1,7 @@
 package com.flimflo.alpha.ui.news
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,10 +23,8 @@ class NewsAdapter(private val context: Context, private val newsList: MutableLis
         val imgUrl = currentItem.imgUrl
         val title = currentItem.title
         val date = currentItem.date
-        val content = currentItem.content
         holder.txtTitle.text = title
         holder.txtDate.text = date
-        holder.txtContent.text = content
         Picasso.with(context).load(imgUrl).fit().centerInside().into(holder.imgNews)
     }
 
@@ -37,7 +36,19 @@ class NewsAdapter(private val context: Context, private val newsList: MutableLis
         var imgNews: ImageView = itemView.findViewById(R.id.imgNewsItem)
         var txtTitle: TextView = itemView.findViewById(R.id.txtTitleNewsItem)
         var txtDate: TextView = itemView.findViewById(R.id.txtDateNewsItem)
-        var txtContent: TextView = itemView.findViewById(R.id.txtContentNewsItem)
+
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                val currentNews = newsList[position]
+                val intent = Intent(context, NewsDetail::class.java)
+                intent.putExtra(NewsConstants.DATE,currentNews.date)
+                intent.putExtra(NewsConstants.IMAGE,currentNews.imgUrl)
+                intent.putExtra(NewsConstants.TITLE,currentNews.title)
+                intent.putExtra(NewsConstants.DESCRIPTION,currentNews.content)
+                context.startActivity(intent)
+            }
+        }
 
     }
 }
