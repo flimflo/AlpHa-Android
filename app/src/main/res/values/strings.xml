@@ -14,4 +14,8 @@
     <string name="contacto">Contact</string>
     <string name="direccion">Address</string>
     <string name="logosponsor">LogoSponsor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hora">Hora:</string>
+    <string name="cancha">Cancha:</string>
 </resources>

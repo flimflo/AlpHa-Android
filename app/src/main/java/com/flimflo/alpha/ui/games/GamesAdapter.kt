@@ -17,14 +17,14 @@ class GamesAdapter(private val context: Context, private val gamesList: MutableL
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = gamesList[position]
-        val team = currentItem.team
-        val goals = currentItem.goals
-        val goalsA = currentItem.goalsA
-        val points = currentItem.points
-        holder.txtTeam.text = team
-        holder.txtGoals.text = goals.toString()
-        holder.txtGoalsA.text = goalsA.toString()
-        holder.txtPoints.text = points.toString()
+        val teamA = currentItem.teamA
+        val teamB = currentItem.teamB
+        val cancha = currentItem.cancha
+        val hora = currentItem.hora
+        holder.txtTeamA.text = teamA
+        holder.txtTeamB.text = teamB
+        holder.txtCancha.text = cancha.toString()
+        holder.txtHora.text = hora
     }
 
     override fun getItemCount(): Int {
@@ -32,10 +32,10 @@ class GamesAdapter(private val context: Context, private val gamesList: MutableL
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var txtTeam: TextView = itemView.findViewById(R.id.txtTitleGamesItem)
-        var txtGoals: TextView = itemView.findViewById(R.id.txtPosGamesItem)
-        var txtGoalsA: TextView = itemView.findViewById(R.id.txtNegGamesItem)
-        var txtPoints: TextView = itemView.findViewById(R.id.txtTotalGamesItem)
+        var txtTeamA: TextView = itemView.findViewById(R.id.txtTeamAGamesItem)
+        var txtTeamB: TextView = itemView.findViewById(R.id.txtTeamBGamesItem)
+        var txtCancha: TextView = itemView.findViewById(R.id.txtCanGamesItem)
+        var txtHora: TextView = itemView.findViewById(R.id.txtHoraGamesItem)
 
     }
 }
