@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/cancha" />
+                    android:text="@string/field" />
 
                 <TextView
                     android:id="@+id/txtCanGamesItem"
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/hora" />
+                    android:text="@string/hour" />
 
                 <TextView
                     android:id="@+id/txtHoraGamesItem"

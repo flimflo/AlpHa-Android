@@ -12,7 +12,10 @@
     <string name="rule">Regla&#160;</string>
     <string name="team">Equipo</string>
     <string name="updated">actualizado</string>
-    <string name="contacto">Contacto</string>
-    <string name="direccion">Dirección</string>
+    <string name="contact">Contacto</string>
+    <string name="address">Dirección</string>
     <string name="logosponsor">LogoSponsor</string>
+    <string name="date">Fecha:</string>
+    <string name="hour">Hora:</string>
+    <string name="field">Cancha:</string>
 </resources>
