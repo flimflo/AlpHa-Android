@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.news.NewsDetail"></activity>
+        <activity
+            android:name=".ui.news.NewsDetail"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".ui.rules.ruleDetail"
             android:screenOrientation="portrait" />
