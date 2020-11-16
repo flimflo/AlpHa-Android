@@ -11,7 +11,7 @@
     <string name="rule">Rule&#160;</string>
     <string name="team">Team</string>
     <string name="updated">updated</string>
-    <string name="contacto">Contacto</string>
-    <string name="direccion">Dirección</string>
+    <string name="contacto">Contact</string>
+    <string name="direccion">Address</string>
     <string name="logosponsor">LogoSponsor</string>
 </resources>
