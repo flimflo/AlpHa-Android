@@ -14,6 +14,7 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.flimflo.alpha.Enviroment
 import com.flimflo.alpha.R
 import org.json.JSONException
 
@@ -73,7 +74,7 @@ class NewsFragment : Fragment() {
     }
 
     private fun parseNews() {
-        val url = "https://dry-harbor-29135.herokuapp.com/api/news"
+        val url = Enviroment.getEnviroment() + "/api/news"
         val request = JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->

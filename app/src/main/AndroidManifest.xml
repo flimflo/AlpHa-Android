@@ -13,8 +13,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".EnviromentSelector" />
+        <activity
             android:name=".ui.news.NewsDetail"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.rules.ruleDetail"
             android:screenOrientation="portrait" />

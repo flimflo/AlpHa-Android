@@ -17,6 +17,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.flimflo.alpha.Enviroment
 import com.flimflo.alpha.R
 import com.flimflo.alpha.ui.news.News
 import kotlinx.android.synthetic.main.fragment_games.*
@@ -84,7 +85,7 @@ class GamesFragment : Fragment() {
     }
 
     private fun parseGames() {
-        val url = "https://dry-harbor-29135.herokuapp.com/api/weeklymatch"
+        val url = Enviroment.getEnviroment() + "/api/weeklymatch"
         val request = JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->

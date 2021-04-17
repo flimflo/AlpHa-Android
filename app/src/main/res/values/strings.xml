@@ -17,4 +17,7 @@
     <string name="date">Date:</string>
     <string name="hour">Hour:</string>
     <string name="field">Field:</string>
+    <string name="selecciona_tu_torneo">Selecciona tu torneo</string>
+    <string name="domingo">Domingo</string>
+    <string name="s_bado">Sábado</string>
 </resources>

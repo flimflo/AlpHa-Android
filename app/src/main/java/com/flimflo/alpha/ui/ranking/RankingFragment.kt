@@ -14,6 +14,7 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.flimflo.alpha.Enviroment
 import com.flimflo.alpha.R
 import org.json.JSONException
 
@@ -72,7 +73,7 @@ class RankingFragment : Fragment() {
     }
 
     private fun parseRanking() {
-        val url = "https://dry-harbor-29135.herokuapp.com/api/leaderboard/table"
+        val url = Enviroment.getEnviroment() + "/api/leaderboard/table"
         val request = JsonArrayRequest(
             Request.Method.GET, url, null,
             { response ->
