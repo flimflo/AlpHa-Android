@@ -38,10 +38,12 @@
                 android:id="@+id/txtTitleNewsItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
                 android:layout_margin="8dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_vertical"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
 
         </LinearLayout>
 
